@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		54852DC530FABA439304C1C6 /* Pods_SimpleTabBarController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31ED5DDDC173CC0FB4D20951 /* Pods_SimpleTabBarController_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		73E5ED66CF7962463E92FACC /* Pods_SimpleTabBarController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032B3CB2876471ED66FD57B9 /* Pods_SimpleTabBarController_Tests.framework */; };
+		A1638BAB1DC48BFC00E0E0A2 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1638BA91DC48BFC00E0E0A2 /* MainTabBarController.swift */; };
+		A1638BAC1DC48BFC00E0E0A2 /* PhotoButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1638BAA1DC48BFC00E0E0A2 /* PhotoButtonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +36,6 @@
 		607FACD01AFB9204008FA782 /* SimpleTabBarController_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTabBarController_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -44,6 +44,8 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7540D01CD41DBB1B08CC10E7 /* SimpleTabBarController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SimpleTabBarController.podspec; path = ../SimpleTabBarController.podspec; sourceTree = "<group>"; };
 		9AFC72E82CB905D3C8994F47 /* Pods-SimpleTabBarController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTabBarController_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleTabBarController_Example/Pods-SimpleTabBarController_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		A1638BA91DC48BFC00E0E0A2 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		A1638BAA1DC48BFC00E0E0A2 /* PhotoButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoButtonViewController.swift; sourceTree = "<group>"; };
 		B5705CE3F055834397B30BC3 /* Pods-SimpleTabBarController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTabBarController_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleTabBarController_Example/Pods-SimpleTabBarController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C3647FFE622C376A8A390384 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		C751E4BEA24DFE0CA8860184 /* Pods-SimpleTabBarController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTabBarController_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleTabBarController_Tests/Pods-SimpleTabBarController_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -102,8 +104,9 @@
 		607FACD21AFB9204008FA782 /* Example for SimpleTabBarController */ = {
 			isa = PBXGroup;
 			children = (
+				A1638BA91DC48BFC00E0E0A2 /* MainTabBarController.swift */,
+				A1638BAA1DC48BFC00E0E0A2 /* PhotoButtonViewController.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -361,7 +364,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				A1638BAB1DC48BFC00E0E0A2 /* MainTabBarController.swift in Sources */,
+				A1638BAC1DC48BFC00E0E0A2 /* PhotoButtonViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

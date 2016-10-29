@@ -100,10 +100,11 @@ open class SimpleTabBarController: UITabBarController {
 
         for index in 0..<count {
             if let container = containers["container\(index)"] as? SimpleTabBarContainer {
-                container.frame = CGRect(x: width / CGFloat(count) * CGFloat(index)  + 2, y: 0.0, width: width / CGFloat(count) - CGFloat(2 * (count - 1)), height: height)
+                let x = width / CGFloat(count) * CGFloat(index) + 2
+                let width = width / CGFloat(count) - 4
+                container.frame = CGRect(x: x, y: 0.0, width: width, height: height)
                 for view in container.subviews {
                     if let contentView = view as? SimpleTabBarItemContent {
-                        let rect = container.bounds
                         let insets = contentView.insets
                         
                         if insets != .zero {
@@ -116,6 +117,7 @@ open class SimpleTabBarController: UITabBarController {
                             self.view.addSubview(container)
                             self.view.bringSubview(toFront: container)
                         }
+                        let rect = container.bounds
                         contentView.frame = CGRect(x: 0, y: 0, width: rect.width, height: rect.height)
                     }
                 }
