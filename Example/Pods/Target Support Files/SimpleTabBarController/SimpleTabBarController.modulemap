@@ -1,0 +1,6 @@
+framework module SimpleTabBarController {
+  umbrella header "SimpleTabBarController-umbrella.h"
+
+  export *
+  module * { export * }
+}
