@@ -24,11 +24,14 @@ open class SimpleTabBarItem: UITabBarItem {
         get { return super.image }
     }
     open override var selectedImage: UIImage? {
-        set {
-            self.content?.selectedImage = newValue
-            super.selectedImage = nil
+//        set {
+//            self.content?.selectedImage = newValue
+//            super.selectedImage = nil
+//        }
+//        get { return super.selectedImage }
+        didSet {
+            self.content?.selectedImage = selectedImage
         }
-        get { return nil }
     }
     open override var title: String? {
         set { self.content?.title = newValue }

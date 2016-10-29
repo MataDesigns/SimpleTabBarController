@@ -25,7 +25,10 @@ open class SimpleTabBarItemAnimator: NSObject, SimpleTabBarItemAnimatorProtocol 
             content.backgroundColor = highlightBackgroundColor
             content.titleLabel.textColor = highlightTextColor
             if let image = content.imageView.image {
-                let renderImage = image.withRenderingMode(.alwaysTemplate)
+                var renderImage = image.withRenderingMode(.alwaysTemplate)
+                if let selectedImage = content.item.selectedImage {
+                    renderImage = selectedImage.withRenderingMode(.alwaysTemplate)
+                }
                 content.imageView.image = renderImage
                 content.imageView.tintColor = highlightIconColor
             }
