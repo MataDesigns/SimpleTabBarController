@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SimpleTabBarController_Example' do
+  pod 'SimpleTabBarController', :path => '../'
+
+  target 'SimpleTabBarController_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
