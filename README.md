@@ -7,7 +7,7 @@
 
 ## Example
 
-<center><img style="width: 300px" src="SimpleTabBarController.gif"></img></center>
+<center><img width="300" src="SimpleTabBarController.gif"></img></center>
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
