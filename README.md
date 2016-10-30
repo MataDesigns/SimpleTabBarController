@@ -7,6 +7,8 @@
 
 ## Example
 
+<center style="width: 300px">![screen](SimpleTabBarController.gif)</center>
+
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
