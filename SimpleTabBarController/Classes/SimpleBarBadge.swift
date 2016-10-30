@@ -1,5 +1,5 @@
 //
-//  SimpleTabBarItemBadge.swift
+//  SimpleBarItemBadge.swift
 //  Pods
 //
 //  Created by Nicholas Mata on 10/25/16.
@@ -15,10 +15,27 @@ public enum SimpleTabBarBadgeType {
 
 open class SimpleTabBarBadge: UIView {
     
+    /**
+     The maximum size the badge can be.
+     */
     open var maximumSize: CGSize = CGSize(width: 28.0, height: 16.0)
+    /**
+     The minimum size the badge can be.
+     */
     open var minimumSize: CGSize = CGSize(width: 6.0, height: 6.0)
-    open var badgeColor: UIColor = UIColor.red
+    /**
+     The color of the badge.
+     */
+    open var badgeColor: UIColor = UIColor.red {
+        didSet {
+            self.backgroundColor = badgeColor
+        }
+    }
     
+    /**
+     The value that should be displayed in the badge.
+     If you want to hide the badge set this to nil.
+     */
     open var badgeValue: String? {
         didSet {
             guard let badgeValue = badgeValue else {
@@ -35,7 +52,7 @@ open class SimpleTabBarBadge: UIView {
     fileprivate override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = badgeColor
-        badgeLabel = UILabel.init()
+        badgeLabel = UILabel()
         badgeLabel.font = UIFont.systemFont(ofSize: 11.0)
         badgeLabel.textColor = UIColor.white
         badgeLabel.textAlignment = .center

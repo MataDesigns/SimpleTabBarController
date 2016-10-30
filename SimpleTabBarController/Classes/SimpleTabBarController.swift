@@ -13,6 +13,7 @@ public typealias SimpleTabBarShouldHijackHandler = ((_ tabBarController: UITabBa
 
 public typealias SimpleTabBarHijackHandler = ((_ tabBarController: UITabBarController, _ viewController: UIViewController, _ index: Int) -> (Void))
 
+@IBDesignable
 open class SimpleTabBarController: UITabBarController {
     
     /// Array for containers of all the customize tabbars.
@@ -53,10 +54,10 @@ open class SimpleTabBarController: UITabBarController {
                 return
             }
             let oldValue = selectedIndex
-            if oldValue < items.count, let deselectItem = items[oldValue] as? SimpleTabBarItem {
+            if oldValue < items.count, let deselectItem = items[oldValue] as? SimpleBarItem {
                 deselectItem.deselect(animated: true, completion: nil)
             }
-            if newValue < items.count, let animationItem = items[newValue] as? SimpleTabBarItem {
+            if newValue < items.count, let animationItem = items[newValue] as? SimpleBarItem {
                 animationItem.select(animated: true, completion: nil)
             }
         }
@@ -71,7 +72,7 @@ open class SimpleTabBarController: UITabBarController {
                 return
             }
             if newValue == self.moreNavigationController {
-                if selectedIndex < items.count, let deselectItem = items[selectedIndex] as? SimpleTabBarItem {
+                if selectedIndex < items.count, let deselectItem = items[selectedIndex] as? SimpleBarItem {
                     deselectItem.deselect(animated: true, completion: nil)
                 }
             }
@@ -81,15 +82,6 @@ open class SimpleTabBarController: UITabBarController {
     open override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBar.setValue(true, forKey: "_hidesShadow")
-        
-        if let controllers = self.viewControllers {
-            for viewController in controllers {
-                if let item = viewController.tabBarItem as? SimpleTabBarItem {
-                    let image = viewController.tabBarItem.image
-                    item.image = image
-                }
-            }
-        }
     }
     
     open override func viewDidLayoutSubviews() {
@@ -100,11 +92,11 @@ open class SimpleTabBarController: UITabBarController {
 
         for index in 0..<count {
             if let container = containers["container\(index)"] as? SimpleTabBarContainer {
-                let x = width / CGFloat(count) * CGFloat(index) + 2
-                let width = width / CGFloat(count) - 4
+                let x = width / CGFloat(count) * CGFloat(index) //+ 2
+                let width = width / CGFloat(count) //- 2
                 container.frame = CGRect(x: x, y: 0.0, width: width, height: height)
                 for view in container.subviews {
-                    if let contentView = view as? SimpleTabBarItemContent {
+                    if let contentView = view as? SimpleBarItemContent {
                         let insets = contentView.insets
                         
                         if insets != .zero {
@@ -167,13 +159,12 @@ extension SimpleTabBarController /* Containers */ {
             container.addTarget(self, action: #selector(SimpleTabBarController.highlightAction(_:)), for: .touchDown)
             container.addTarget(self, action: #selector(SimpleTabBarController.highlightAction(_:)), for: .touchDragEnter)
             container.addTarget(self, action: #selector(SimpleTabBarController.dehighlightAction(_:)), for: .touchDragExit)
-            container.backgroundColor = UIColor.clear
             
             tabBar.addSubview(container)
             containers["container\(index)"] = container
             
-            /// Add the item to the container animator
-            if let item = items[index] as? SimpleTabBarItem {
+            /// Add the item to the container appearance
+            if let item = items[index] as? SimpleBarItem {
                 item.index = index
                 item.tabBarController = self
                 if let content = item.content {
@@ -232,7 +223,7 @@ extension SimpleTabBarController /* Containers */ {
             let shouldHijack = shouldHijackHandler(self, vc, targetIndex)
             if shouldHijack == true {
                 // Do animate when hijack
-                if targetIndex < items.count, let animationItem = items[targetIndex] as? SimpleTabBarItem {
+                if targetIndex < items.count, let animationItem = items[targetIndex] as? SimpleBarItem {
                     animationItem.highlight(highlight: true, animated: true, completion: {
                         
                     })
@@ -242,7 +233,7 @@ extension SimpleTabBarController /* Containers */ {
         }
         
         /// Do
-        if targetIndex < items.count, let animationItem = items[targetIndex] as? SimpleTabBarItem {
+        if targetIndex < items.count, let animationItem = items[targetIndex] as? SimpleBarItem {
             animationItem.highlight(highlight: true, animated: true, completion: nil)
         }
     }
@@ -288,7 +279,7 @@ extension SimpleTabBarController /* Containers */ {
             let shouldHijack = shouldHijackHandler(self, vc, targetIndex)
             if shouldHijack == true {
                 // Do animate when hijack
-                if targetIndex < items.count, let animationItem = items[targetIndex] as? SimpleTabBarItem {
+                if targetIndex < items.count, let animationItem = items[targetIndex] as? SimpleBarItem {
                     animationItem.highlight(highlight: false, animated: true, completion: {
                         
                     })
@@ -298,7 +289,7 @@ extension SimpleTabBarController /* Containers */ {
         }
         
         /// Do
-        if targetIndex < items.count, let animationItem = items[targetIndex] as? SimpleTabBarItem {
+        if targetIndex < items.count, let animationItem = items[targetIndex] as? SimpleBarItem {
             animationItem.highlight(highlight: false, animated: true, completion: nil)
         }
     }
@@ -346,7 +337,7 @@ extension SimpleTabBarController /* Containers */ {
             if shouldHijack == true {
                 self.hijackHandler?(self, vc, targetIndex)
                 // Do animate when hijack
-                if targetIndex < items.count, let animationItem = items[targetIndex] as? SimpleTabBarItem {
+                if targetIndex < items.count, let animationItem = items[targetIndex] as? SimpleBarItem {
                     animationItem.select(animated: true, completion: {
                         animationItem.deselect(animated: false, completion: {
                             
@@ -359,10 +350,10 @@ extension SimpleTabBarController /* Containers */ {
         
         /// Do
         if currentIndex != targetIndex {
-            if currentIndex < items.count, let deselectItem = items[currentIndex] as? SimpleTabBarItem {
+            if currentIndex < items.count, let deselectItem = items[currentIndex] as? SimpleBarItem {
                 deselectItem.deselect(animated: true, completion: nil)
             }
-            if targetIndex < items.count, let animationItem = items[targetIndex] as? SimpleTabBarItem {
+            if targetIndex < items.count, let animationItem = items[targetIndex] as? SimpleBarItem {
                 animationItem.select(animated: true, completion: nil)
             }
             ignoreNextAnimation = true
@@ -372,7 +363,7 @@ extension SimpleTabBarController /* Containers */ {
             
         } else if currentIndex == targetIndex {
             /// Click the same again tab may require animation, so have the following:
-            if currentIndex < items.count, let animationItem = items[currentIndex] as? SimpleTabBarItem {
+            if currentIndex < items.count, let animationItem = items[currentIndex] as? SimpleBarItem {
                 animationItem.reselect(animated: true, completion: nil)
             }
             if let navVC = viewControllers![selectedIndex] as? UINavigationController {

@@ -8,32 +8,32 @@
 
 import UIKit
 
-open class SimpleBounceAnimator: SimpleTabBarItemAnimator {
+open class SimpleBounceAppearance: SimpleBarItemAppearance {
     
     open var duration = 0.3
     
-    override init() {
+    required public init() {
         super.init()
-        textColor = UIColor.init(white: 175.0 / 255.0, alpha: 1.0)
-        highlightTextColor = UIColor.init(red: 254/255.0, green: 73/255.0, blue: 42/255.0, alpha: 1.0)
-        iconColor = UIColor.init(white: 175.0 / 255.0, alpha: 1.0)
-        highlightIconColor = UIColor.init(red: 254/255.0, green: 73/255.0, blue: 42/255.0, alpha: 1.0)
+        textColor = UIColor(white: 175.0 / 255.0, alpha: 1.0)
+        highlightTextColor = UIColor(red: 254/255.0, green: 73/255.0, blue: 42/255.0, alpha: 1.0)
+        iconColor = UIColor(white: 175.0 / 255.0, alpha: 1.0)
+        highlightIconColor = UIColor(red: 254/255.0, green: 73/255.0, blue: 42/255.0, alpha: 1.0)
         backgroundColor = UIColor.clear
         highlightBackgroundColor = UIColor.clear
     }
     
     open override func selectAnimation(content: UIView, animated: Bool, completion: (() -> ())?) {
         super.selectAnimation(content: content, animated: animated, completion: completion)
-        if let content = content as? SimpleTabBarItemContent {
+        if let content = content as? SimpleBarItemContent {
             self.bounceAnimation(content.imageView)
         }
     }
     
     open override func reselectAnimation(content: UIView, animated: Bool, completion: (() -> ())?) {
         super.reselectAnimation(content: content, animated: animated, completion: completion)
-        if let content = content as? SimpleTabBarItemContent {
-            self.bounceAnimation(content.imageView)
-        }
+//        if let content = content as? SimpleBarItemContent {
+//            self.bounceAnimation(content.imageView)
+//        }
     }
     
     open override func deselectAnimation(content: UIView, animated: Bool, completion: (() -> ())?) {
@@ -53,7 +53,7 @@ open class SimpleBounceAnimator: SimpleTabBarItemAnimator {
     
     open override func badgeChangedAnimation(content: UIView, completion: (() -> ())?) {
         super.badgeChangedAnimation(content: content, completion: completion)
-        if let content = content as? SimpleTabBarItemContent {
+        if let content = content as? SimpleBarItemContent {
             notificationAnimation(content.imageView)
         }
     }

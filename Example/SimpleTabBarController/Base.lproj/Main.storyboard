@@ -21,7 +21,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.23018704349999999" green="0.77713233230000001" blue="0.31589496140000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="favor" selectedImage="favor_1" id="Prv-QF-CdY" customClass="SimpleTabBarItem" customModule="SimpleTabBarController"/>
+                    <tabBarItem key="tabBarItem" title="" image="favor" selectedImage="favor_1" id="Prv-QF-CdY" customClass="SimpleBarItem" customModule="SimpleTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                <color key="value" red="1" green="0.0" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycb-rl-tGI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -40,7 +46,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.8912609816" green="0.35455638169999998" blue="0.39968371390000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="me" selectedImage="me_1" id="Nk1-oD-unQ" customClass="SimpleTabBarItem" customModule="SimpleTabBarController"/>
+                    <tabBarItem key="tabBarItem" title="" image="me" selectedImage="me_1" id="Nk1-oD-unQ" customClass="SimpleBarItem" customModule="SimpleTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                <color key="value" red="1" green="0.0" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="geM-Zb-Snr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,16 +108,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.1819814891" green="0.69426733259999995" blue="0.53024792669999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="cardboard" selectedImage="cardboard_1" id="thO-ce-u3z" customClass="SimpleTabBarItem" customModule="SimpleTabBarController"/>
+                    <tabBarItem key="tabBarItem" title="" image="cardboard" selectedImage="cardboard_1" id="thO-ce-u3z" customClass="SimpleBarItem" customModule="SimpleTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                <color key="value" red="1" green="0.0" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fh8-L5-agd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2143" y="816"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="13K-CV-dIA">
             <objects>
-                <viewController id="yRy-Oh-JZo" sceneMemberID="viewController">
+                <viewController id="yRy-Oh-JZo" customClass="HomeViewController" customModule="SimpleTabBarController_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WVk-mF-c9a"/>
                         <viewControllerLayoutGuide type="bottom" id="QXD-Ce-kdl"/>
@@ -113,9 +131,46 @@
                     <view key="view" contentMode="scaleToFill" id="rSP-me-mZX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ArZ-ar-KDZ">
+                                <rect key="frame" x="125" y="293" width="124" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiU-8Y-mtl">
+                                        <rect key="frame" x="0.0" y="0.0" width="124" height="30"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Increment Badge">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="incrementBadge:" destination="yRy-Oh-JZo" eventType="touchUpInside" id="xhf-HL-Yxp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3RF-6L-bez">
+                                        <rect key="frame" x="0.0" y="50" width="124" height="30"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Decrement Badge">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="decrementBadge:" destination="yRy-Oh-JZo" eventType="touchUpInside" id="m9v-pL-bl4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ArZ-ar-KDZ" firstAttribute="centerY" secondItem="rSP-me-mZX" secondAttribute="centerY" id="I4Y-fN-i5c"/>
+                            <constraint firstItem="ArZ-ar-KDZ" firstAttribute="centerX" secondItem="rSP-me-mZX" secondAttribute="centerX" id="xnB-nh-K5T"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="home" selectedImage="home_1" id="6M1-Ev-9i4" customClass="SimpleTabBarItem" customModule="SimpleTabBarController"/>
+                    <tabBarItem key="tabBarItem" title="" image="home" selectedImage="home_1" id="6M1-Ev-9i4" customClass="SimpleBarItem" customModule="SimpleTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                <color key="value" red="1" green="0.0" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cq-um-9aK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

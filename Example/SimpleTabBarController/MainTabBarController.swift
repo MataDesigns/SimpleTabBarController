@@ -14,7 +14,6 @@ class MainTabBarController: SimpleTabBarController {
     var value: Int64 = 0
     open override func viewDidLoad() {
         super.viewDidLoad()
-//        self.transparentShadowBar = true
         
         self.shouldHijackHandler = {
             tabbarController, viewController, index in
@@ -31,7 +30,8 @@ class MainTabBarController: SimpleTabBarController {
         }
         
         let v3          = UIViewController()
-        v3.tabBarItem = SimpleTabBarItem(animator: SimpleIrregularAnimator())
+        let appreance = SimpleIrregularAppearance()
+        v3.tabBarItem = SimpleBarItem(appearance: appreance)
         
         v3.tabBarItem.image = UIImage(named: "photo_verybig")
         self.viewControllers?.insert(v3, at: 2)

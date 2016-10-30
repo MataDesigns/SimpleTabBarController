@@ -27,19 +27,20 @@ pod "SimpleTabBarController"
 
 - [x] Allows for custom item animations.
 - [x] Supports storyboard.
-- [ ] Implement selected image for item.
+- [x] Implement selected image for item.
+- [x] Change icon selected and unselected color from storyboard.
 
 ## Usage
 
-### Default Animator 
+### Default appearance 
 
-The default animator is SimpleBounceAnimator which will make tabbar icon bounce when selected.
+The default appearance is SimpleBounceAnimator which will make tabbar icon bounce when selected.
 
 ### Getting Started
 
 1. Drag a UITabBarController onto your storyboard.
 2. Change class to SimpleTabBarController or a subclass you created.
-3. Change item classes from UITabBarItem to SimpleTabBarItem.
+3. Change item classes from UITabBarItem to SimpleBarItem.
 
 ## Author
 

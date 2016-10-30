@@ -14,16 +14,16 @@
 		54BA02775A8A17068A27024FC4CC3FFF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */; };
 		57355AFB7D9823205CD6863E9AFC9836 /* Pods-SimpleTabBarController_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A5E1D970C171DF3BFD209E964C1FFB /* Pods-SimpleTabBarController_Example-dummy.m */; };
 		6B5CAFD98BAC8CF276FE4E1468678D0A /* Pods-SimpleTabBarController_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A15BD5E40575667E6CB5A8226724AA5 /* Pods-SimpleTabBarController_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		72F01BBF9A7E339F4C53512D0481B277 /* SimpleBarItemAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B0CA2E1385C41131830E88B7917E8 /* SimpleBarItemAnimator.swift */; };
+		72F01BBF9A7E339F4C53512D0481B277 /* SimpleBarItemAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98B0CA2E1385C41131830E88B7917E8 /* SimpleBarItemAppearance.swift */; };
 		7CACD93501C6BFE3B515835C3C5585D2 /* SimpleTabBarController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0841A5590215707A08792CE0825C48 /* SimpleTabBarController-dummy.m */; };
 		8DFDFF4C843A2391A9D47243906FB5F4 /* Pods-SimpleTabBarController_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ED1F9D5281EF82BA6F998CA963BD2092 /* Pods-SimpleTabBarController_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F26669FFE1E45353633029BD668FB20 /* SimpleTabBarController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C3C580A83C2CE5E4B062A98059CD5A1A /* SimpleTabBarController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		985BA9FCB6A6D8A7914D9D93745A8B6C /* Pods-SimpleTabBarController_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD1445F03851BEBD23C87F5740225AF /* Pods-SimpleTabBarController_Tests-dummy.m */; };
-		C3D2D26C2B8FB868D4E70887E74FCD45 /* SimpleIrregularAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4E514984A176C0C0F0A6E160986524 /* SimpleIrregularAnimator.swift */; };
+		C3D2D26C2B8FB868D4E70887E74FCD45 /* SimpleIrregularAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4E514984A176C0C0F0A6E160986524 /* SimpleIrregularAppearance.swift */; };
 		C64F9F8B089A14893E6C008F9A1C5D44 /* SimpleTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6F338E27A389DBB80E82BA2F11A9FB /* SimpleTabBarController.swift */; };
 		CF26F68697F7F2DDC87A49E4311745BE /* SimpleBarItemContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3252ED5564F98243BB8F84B1293AEA54 /* SimpleBarItemContent.swift */; };
 		D30EEB3D733D0D424AEB26693BE26E60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
-		D46F8CFDB3BECC077DCE13CCF6EF5529 /* BounceAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD4F518DD28CB8C9A0E99BA1CCD0782 /* BounceAnimator.swift */; };
+		D46F8CFDB3BECC077DCE13CCF6EF5529 /* SimpleBounceAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD4F518DD28CB8C9A0E99BA1CCD0782 /* SimpleBounceAppearance.swift */; };
 		E735621D0606B74EF8399F04EAFE7E9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,11 +46,11 @@
 		2DB93BACB3A13CFFE73F04E5B89A6BC6 /* Pods-SimpleTabBarController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleTabBarController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		2DE36C95AF9E860F4444F520F628C47F /* Pods-SimpleTabBarController_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SimpleTabBarController_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2F0841A5590215707A08792CE0825C48 /* SimpleTabBarController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SimpleTabBarController-dummy.m"; sourceTree = "<group>"; };
-		2FD4F518DD28CB8C9A0E99BA1CCD0782 /* BounceAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BounceAnimator.swift; sourceTree = "<group>"; };
+		2FD4F518DD28CB8C9A0E99BA1CCD0782 /* SimpleBounceAppearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SimpleBounceAppearance.swift; sourceTree = "<group>"; };
 		3252ED5564F98243BB8F84B1293AEA54 /* SimpleBarItemContent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SimpleBarItemContent.swift; sourceTree = "<group>"; };
 		3A2A18A072C0790DA7E094EED4D6FA1E /* Pods-SimpleTabBarController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleTabBarController_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		3E2596CB503FBB713FA2491992DBE10D /* Pods-SimpleTabBarController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleTabBarController_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		4C4E514984A176C0C0F0A6E160986524 /* SimpleIrregularAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SimpleIrregularAnimator.swift; sourceTree = "<group>"; };
+		4C4E514984A176C0C0F0A6E160986524 /* SimpleIrregularAppearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SimpleIrregularAppearance.swift; sourceTree = "<group>"; };
 		66E0E15BB56C8A89D3063747BEEE2AC2 /* SimpleTabBarController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SimpleTabBarController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67A8C4C61D9AE0253E2A9489273629BF /* Pods-SimpleTabBarController_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SimpleTabBarController_Tests-resources.sh"; sourceTree = "<group>"; };
 		6F0BFEBB26C881F1437A6C548B31C167 /* Pods-SimpleTabBarController_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SimpleTabBarController_Tests-frameworks.sh"; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		99A5E1D970C171DF3BFD209E964C1FFB /* Pods-SimpleTabBarController_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SimpleTabBarController_Example-dummy.m"; sourceTree = "<group>"; };
 		9B48C6759C6B0828902F70660EB7896B /* Pods-SimpleTabBarController_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SimpleTabBarController_Example-resources.sh"; sourceTree = "<group>"; };
 		A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		A98B0CA2E1385C41131830E88B7917E8 /* SimpleBarItemAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SimpleBarItemAnimator.swift; sourceTree = "<group>"; };
+		A98B0CA2E1385C41131830E88B7917E8 /* SimpleBarItemAppearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SimpleBarItemAppearance.swift; sourceTree = "<group>"; };
 		B1A856FD420423059B95409C29EDF934 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B497BD98FB40184E7D5AB86DCEC90629 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7A82610E3BD5D65DDB3347AAD8DBBCD /* Pods-SimpleTabBarController_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SimpleTabBarController_Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -137,12 +137,13 @@
 			path = "Target Support Files/Pods-SimpleTabBarController_Example";
 			sourceTree = "<group>";
 		};
-		400D34ABAAF0800C1318F1273DA86960 /* SimpleAnimators */ = {
+		400D34ABAAF0800C1318F1273DA86960 /* SimplePresence */ = {
 			isa = PBXGroup;
 			children = (
-				2FD4F518DD28CB8C9A0E99BA1CCD0782 /* BounceAnimator.swift */,
-				4C4E514984A176C0C0F0A6E160986524 /* SimpleIrregularAnimator.swift */,
+				2FD4F518DD28CB8C9A0E99BA1CCD0782 /* SimpleBounceAppearance.swift */,
+				4C4E514984A176C0C0F0A6E160986524 /* SimpleIrregularAppearance.swift */,
 			);
+			name = SimplePresence;
 			path = SimpleAnimators;
 			sourceTree = "<group>";
 		};
@@ -159,11 +160,11 @@
 			children = (
 				2923CFA69D0263EB3F78DB83371FA733 /* SimpleBarBadge.swift */,
 				E1F217674C0531336EC9DCE6538173F8 /* SimpleBarItem.swift */,
-				A98B0CA2E1385C41131830E88B7917E8 /* SimpleBarItemAnimator.swift */,
+				A98B0CA2E1385C41131830E88B7917E8 /* SimpleBarItemAppearance.swift */,
 				3252ED5564F98243BB8F84B1293AEA54 /* SimpleBarItemContent.swift */,
 				12950FAFD859DC6A94B769A86A165E9E /* SimpleBarItemProtocol.swift */,
 				7B6F338E27A389DBB80E82BA2F11A9FB /* SimpleTabBarController.swift */,
-				400D34ABAAF0800C1318F1273DA86960 /* SimpleAnimators */,
+				400D34ABAAF0800C1318F1273DA86960 /* SimplePresence */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -378,13 +379,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D46F8CFDB3BECC077DCE13CCF6EF5529 /* BounceAnimator.swift in Sources */,
+				D46F8CFDB3BECC077DCE13CCF6EF5529 /* SimpleBounceAppearance.swift in Sources */,
 				12420DD29C55E0AFE0AAE695BFC738DF /* SimpleBarBadge.swift in Sources */,
 				163ECC8C6FF4C9D1A118331591A168FC /* SimpleBarItem.swift in Sources */,
-				72F01BBF9A7E339F4C53512D0481B277 /* SimpleBarItemAnimator.swift in Sources */,
+				72F01BBF9A7E339F4C53512D0481B277 /* SimpleBarItemAppearance.swift in Sources */,
 				CF26F68697F7F2DDC87A49E4311745BE /* SimpleBarItemContent.swift in Sources */,
 				456D937A622C92A3517113756BF6AFF0 /* SimpleBarItemProtocol.swift in Sources */,
-				C3D2D26C2B8FB868D4E70887E74FCD45 /* SimpleIrregularAnimator.swift in Sources */,
+				C3D2D26C2B8FB868D4E70887E74FCD45 /* SimpleIrregularAppearance.swift in Sources */,
 				7CACD93501C6BFE3B515835C3C5585D2 /* SimpleTabBarController-dummy.m in Sources */,
 				C64F9F8B089A14893E6C008F9A1C5D44 /* SimpleTabBarController.swift in Sources */,
 			);

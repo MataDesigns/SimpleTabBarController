@@ -8,16 +8,25 @@
 
 import UIKit
 
-open class SimpleIrregularAnimator: SimpleTabBarItemAnimator {
+open class SimpleIrregularAppearance: SimpleBarItemAppearance {
+    
+    open var borderWidth: CGFloat = 3.0
+    open var borderColor = UIColor(white: 235 / 255.0, alpha: 1.0)
+    
+    open var radius: CGFloat = 35
+    
+    open var insets: UIEdgeInsets = UIEdgeInsetsMake(-32, 0, 0, 0)
+    
+    open var irregularBackgroundColor: UIColor = .gray
     
     open override var content: UIView? {
         didSet {
-            if let content = content as? SimpleTabBarItemContent {
-                content.imageView.backgroundColor = UIColor(red: 23/255.0, green: 149/255.0, blue: 158/255.0, alpha: 1.0)
-                content.imageView.layer.borderWidth = 3.0
-                content.imageView.layer.borderColor = UIColor(white: 235 / 255.0, alpha: 1.0).cgColor
-                content.imageView.layer.cornerRadius = 35
-                content.insets = UIEdgeInsetsMake(-32, 0, 0, 0)
+            if let content = content as? SimpleBarItemContent {
+                content.imageView.backgroundColor = irregularBackgroundColor
+                content.imageView.layer.borderWidth = borderWidth
+                content.imageView.layer.borderColor = borderColor.cgColor
+                content.imageView.layer.cornerRadius = radius
+                content.insets = insets
                 let transform = CGAffineTransform.identity
                 content.imageView.transform = transform
                 content.superview?.bringSubview(toFront: content)
@@ -25,7 +34,7 @@ open class SimpleIrregularAnimator: SimpleTabBarItemAnimator {
         }
     }
     
-    public override init() {
+    public required init() {
         super.init()
         textColor = UIColor.init(white: 255.0 / 255.0, alpha: 1.0)
         highlightTextColor = UIColor.init(white: 255.0 / 255.0, alpha: 1.0)

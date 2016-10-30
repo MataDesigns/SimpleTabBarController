@@ -16,6 +16,7 @@
 		73E5ED66CF7962463E92FACC /* Pods_SimpleTabBarController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032B3CB2876471ED66FD57B9 /* Pods_SimpleTabBarController_Tests.framework */; };
 		A1638BAB1DC48BFC00E0E0A2 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1638BA91DC48BFC00E0E0A2 /* MainTabBarController.swift */; };
 		A1638BAC1DC48BFC00E0E0A2 /* PhotoButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1638BAA1DC48BFC00E0E0A2 /* PhotoButtonViewController.swift */; };
+		A1B544DC1DC55029003CE92C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B544DB1DC55029003CE92C /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		9AFC72E82CB905D3C8994F47 /* Pods-SimpleTabBarController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTabBarController_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleTabBarController_Example/Pods-SimpleTabBarController_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A1638BA91DC48BFC00E0E0A2 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		A1638BAA1DC48BFC00E0E0A2 /* PhotoButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoButtonViewController.swift; sourceTree = "<group>"; };
+		A1B544DB1DC55029003CE92C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B5705CE3F055834397B30BC3 /* Pods-SimpleTabBarController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTabBarController_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleTabBarController_Example/Pods-SimpleTabBarController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C3647FFE622C376A8A390384 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		C751E4BEA24DFE0CA8860184 /* Pods-SimpleTabBarController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTabBarController_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleTabBarController_Tests/Pods-SimpleTabBarController_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		607FACD21AFB9204008FA782 /* Example for SimpleTabBarController */ = {
 			isa = PBXGroup;
 			children = (
+				A1B544DB1DC55029003CE92C /* HomeViewController.swift */,
 				A1638BA91DC48BFC00E0E0A2 /* MainTabBarController.swift */,
 				A1638BAA1DC48BFC00E0E0A2 /* PhotoButtonViewController.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
@@ -218,10 +221,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 72NH26LUXP;
 						LastSwiftMigration = 0810;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 72NH26LUXP;
 						LastSwiftMigration = 0810;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -367,6 +372,7 @@
 				A1638BAB1DC48BFC00E0E0A2 /* MainTabBarController.swift in Sources */,
 				A1638BAC1DC48BFC00E0E0A2 /* PhotoButtonViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				A1B544DC1DC55029003CE92C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +507,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 72NH26LUXP;
 				INFOPLIST_FILE = SimpleTabBarController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -517,6 +524,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 72NH26LUXP;
 				INFOPLIST_FILE = SimpleTabBarController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -531,6 +539,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 41D98E2326CBD6F8669D52ED /* Pods-SimpleTabBarController_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 72NH26LUXP;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -551,6 +560,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C751E4BEA24DFE0CA8860184 /* Pods-SimpleTabBarController_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 72NH26LUXP;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

@@ -1,5 +1,5 @@
 //
-//  SimpleTabBarItemContent.swift
+//  SimpleBarItemContent.swift
 //  Pods
 //
 //  Created by Nicholas Mata on 10/25/16.
@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-open class SimpleTabBarItemContent: UIView {
+open class SimpleBarItemContent: UIView {
     
     open weak var item: UITabBarItem!
-    open var animator: SimpleTabBarItemAnimatorProtocol!
+    open var appearance: SimpleBarItemAppearance!
     open var insets: UIEdgeInsets = UIEdgeInsets.zero
     open var highlighted: Bool = false
     open var highlightEnabled: Bool = true
@@ -24,7 +24,7 @@ open class SimpleTabBarItemContent: UIView {
         didSet {
             badgeView.badgeValue = badgeValue
             setNeedsLayout()
-            animator.badgeChangedAnimation(content: self, completion: nil)
+            appearance.badgeChangedAnimation(content: self, completion: nil)
         }
     }
     
@@ -41,7 +41,7 @@ open class SimpleTabBarItemContent: UIView {
         didSet {
             if selected == false || selectedImage == nil {
                 imageView.image = image
-                animator.deselectAnimation(content: self, animated: false, completion: nil)
+                appearance.deselectAnimation(content: self, animated: false, completion: nil)
                 setNeedsLayout()
             }
         }
@@ -50,7 +50,7 @@ open class SimpleTabBarItemContent: UIView {
         didSet {
             if selected == true {
                 imageView.image = selectedImage
-                animator.selectAnimation(content: self, animated: false, completion: nil)
+                appearance.selectAnimation(content: self, animated: false, completion: nil)
                 setNeedsLayout()
             }
         }
@@ -80,10 +80,8 @@ open class SimpleTabBarItemContent: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         isUserInteractionEnabled = false
-        animator = SimpleTabBarItemAnimator.init()
-        if let anim = animator as? SimpleTabBarItemAnimator {
-            anim.content = self
-        }
+        appearance = SimpleBarItemAppearance()
+        appearance.content = self
         badgeView = SimpleTabBarBadge()
         badgeView?.isHidden = true
         addSubview(imageView)
@@ -95,13 +93,11 @@ open class SimpleTabBarItemContent: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public convenience init(animator anim: SimpleTabBarItemAnimatorProtocol) {
+    public convenience init(appearance anim: SimpleBarItemAppearance) {
         self.init()
         isUserInteractionEnabled = false
-        animator = anim
-        if let anim = anim as? SimpleTabBarItemAnimator {
-            anim.content = self
-        }
+        appearance = anim
+        anim.content = self
         badgeView = SimpleTabBarBadge()
         badgeView?.isHidden = true
         addSubview(imageView)
@@ -139,35 +135,35 @@ open class SimpleTabBarItemContent: UIView {
         selected = true
         if highlightEnabled == true && highlighted == true {
             highlighted = false
-            animator.dehighlightAnimation(content: self, animated: animated, completion: {
-                self.animator.selectAnimation(content: self, animated: animated, completion: completion)
+            appearance.dehighlightAnimation(content: self, animated: animated, completion: {
+                self.appearance.selectAnimation(content: self, animated: animated, completion: completion)
             })
         } else {
-            animator.selectAnimation(content: self, animated: animated, completion: completion)
+            appearance.selectAnimation(content: self, animated: animated, completion: completion)
         }
     }
     
     open func reselect(animated: Bool, completion: (() -> ())?){
         selected = true
-        animator.reselectAnimation(content: self, animated: animated, completion: completion)
+        appearance.reselectAnimation(content: self, animated: animated, completion: completion)
     }
     
     open func deselect(animated: Bool, completion: (() -> ())?){
         selected = false
-        animator.deselectAnimation(content: self, animated: animated, completion: completion)
+        appearance.deselectAnimation(content: self, animated: animated, completion: completion)
     }
     
     open func highlight(highlight: Bool, animated: Bool, completion: (() -> ())?){
         if highlightEnabled == true && highlighted != highlight {
             highlighted = highlight
             if highlighted == true {
-                animator.highlightAnimation(content: self, animated: animated, completion: completion)
+                appearance.highlightAnimation(content: self, animated: animated, completion: completion)
             } else {
-                animator.dehighlightAnimation(content: self, animated: animated, completion: {
+                appearance.dehighlightAnimation(content: self, animated: animated, completion: {
                     if self.selected == true {
-                        self.animator.selectAnimation(content: self, animated: false, completion: completion)
+                        self.appearance.selectAnimation(content: self, animated: false, completion: completion)
                     } else {
-                        self.animator.deselectAnimation(content: self, animated: false, completion: completion)
+                        self.appearance.deselectAnimation(content: self, animated: false, completion: completion)
                     }
                 })
             }
