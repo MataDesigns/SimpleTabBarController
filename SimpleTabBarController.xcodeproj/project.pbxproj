@@ -13,13 +13,11 @@
 		A14EAD7E1F01A575005E3D95 /* SimpleBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14EAD761F01A575005E3D95 /* SimpleBarItem.swift */; };
 		A14EAD7F1F01A575005E3D95 /* SimpleBarItemAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14EAD771F01A575005E3D95 /* SimpleBarItemAppearance.swift */; };
 		A14EAD801F01A575005E3D95 /* SimpleBarItemContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14EAD781F01A575005E3D95 /* SimpleBarItemContent.swift */; };
-		A14EAD811F01A575005E3D95 /* SimpleBarItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14EAD791F01A575005E3D95 /* SimpleBarItemProtocol.swift */; };
 		A14EAD821F01A575005E3D95 /* SimpleTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14EAD7A1F01A575005E3D95 /* SimpleTabBarController.swift */; };
 		A14EAD831F01A645005E3D95 /* SimpleBarBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14EAD751F01A575005E3D95 /* SimpleBarBadge.swift */; };
 		A14EAD841F01A645005E3D95 /* SimpleBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14EAD761F01A575005E3D95 /* SimpleBarItem.swift */; };
 		A14EAD851F01A645005E3D95 /* SimpleBarItemAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14EAD771F01A575005E3D95 /* SimpleBarItemAppearance.swift */; };
 		A14EAD861F01A645005E3D95 /* SimpleBarItemContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14EAD781F01A575005E3D95 /* SimpleBarItemContent.swift */; };
-		A14EAD871F01A645005E3D95 /* SimpleBarItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14EAD791F01A575005E3D95 /* SimpleBarItemProtocol.swift */; };
 		A14EAD881F01A645005E3D95 /* SimpleTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14EAD7A1F01A575005E3D95 /* SimpleTabBarController.swift */; };
 		A14EAD891F01A64C005E3D95 /* SimpleBounceAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14EAD731F01A575005E3D95 /* SimpleBounceAppearance.swift */; };
 		A14EAD8A1F01A64C005E3D95 /* SimpleIrregularAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14EAD741F01A575005E3D95 /* SimpleIrregularAppearance.swift */; };
@@ -46,7 +44,6 @@
 		A14EAD761F01A575005E3D95 /* SimpleBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleBarItem.swift; sourceTree = "<group>"; };
 		A14EAD771F01A575005E3D95 /* SimpleBarItemAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleBarItemAppearance.swift; sourceTree = "<group>"; };
 		A14EAD781F01A575005E3D95 /* SimpleBarItemContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleBarItemContent.swift; sourceTree = "<group>"; };
-		A14EAD791F01A575005E3D95 /* SimpleBarItemProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleBarItemProtocol.swift; sourceTree = "<group>"; };
 		A14EAD7A1F01A575005E3D95 /* SimpleTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleTabBarController.swift; sourceTree = "<group>"; };
 		A14EAD8D1F01A711005E3D95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A19B54DD1F019D1F000199B6 /* SimpleTabBarController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SimpleTabBarController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,7 +108,6 @@
 				A14EAD761F01A575005E3D95 /* SimpleBarItem.swift */,
 				A14EAD771F01A575005E3D95 /* SimpleBarItemAppearance.swift */,
 				A14EAD781F01A575005E3D95 /* SimpleBarItemContent.swift */,
-				A14EAD791F01A575005E3D95 /* SimpleBarItemProtocol.swift */,
 				A14EAD7A1F01A575005E3D95 /* SimpleTabBarController.swift */,
 				A19B54E01F019D1F000199B6 /* SimpleTabBarController.h */,
 				A19B54E11F019D1F000199B6 /* Info.plist */,
@@ -244,7 +240,6 @@
 			files = (
 				A14EAD7E1F01A575005E3D95 /* SimpleBarItem.swift in Sources */,
 				A14EAD821F01A575005E3D95 /* SimpleTabBarController.swift in Sources */,
-				A14EAD811F01A575005E3D95 /* SimpleBarItemProtocol.swift in Sources */,
 				A14EAD7B1F01A575005E3D95 /* SimpleBounceAppearance.swift in Sources */,
 				A14EAD801F01A575005E3D95 /* SimpleBarItemContent.swift in Sources */,
 				A14EAD7C1F01A575005E3D95 /* SimpleIrregularAppearance.swift in Sources */,
@@ -257,7 +252,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A14EAD871F01A645005E3D95 /* SimpleBarItemProtocol.swift in Sources */,
 				A14EAD8A1F01A64C005E3D95 /* SimpleIrregularAppearance.swift in Sources */,
 				A19B54EC1F019D20000199B6 /* SimpleTabBarControllerTests.swift in Sources */,
 				A14EAD881F01A645005E3D95 /* SimpleTabBarController.swift in Sources */,
