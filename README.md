@@ -1,6 +1,6 @@
-<center>![logo](logo.png)</center>
+<center>![logo](/logo.png)</center>
 
-[![CI Status](http://img.shields.io/travis/Nicholas Mata/SimpleTabBarController.svg?style=flat)](https://travis-ci.org/Nicholas Mata/SimpleTabBarController)
+[![CI Status](http://img.shields.io/travis/Nicholas%20Mata/SimpleTabBarController.svg?style=flat)](https://travis-ci.org/Nicholas%20Mata/SimpleTabBarController)
 [![Version](https://img.shields.io/cocoapods/v/SimpleTabBarController.svg?style=flat)](http://cocoapods.org/pods/SimpleTabBarController)
 [![License](https://img.shields.io/cocoapods/l/SimpleTabBarController.svg?style=flat)](http://cocoapods.org/pods/SimpleTabBarController)
 [![Platform](https://img.shields.io/cocoapods/p/SimpleTabBarController.svg?style=flat)](http://cocoapods.org/pods/SimpleTabBarController)
