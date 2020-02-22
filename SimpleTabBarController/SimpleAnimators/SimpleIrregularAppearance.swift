@@ -15,7 +15,7 @@ open class SimpleIrregularAppearance: SimpleBarItemAppearance {
     
     open var radius: CGFloat = 35
     
-    open var insets: UIEdgeInsets = UIEdgeInsetsMake(-32, 0, 0, 0)
+    open var insets: UIEdgeInsets = UIEdgeInsets(top: -32, left: 0, bottom: 0, right: 0)
     
     open var irregularBackgroundColor: UIColor = .gray
     
@@ -29,7 +29,7 @@ open class SimpleIrregularAppearance: SimpleBarItemAppearance {
                 content.insets = insets
                 let transform = CGAffineTransform.identity
                 content.imageView.transform = transform
-                content.superview?.bringSubview(toFront: content)
+                content.superview?.bringSubviewToFront(content)
             }
         }
     }

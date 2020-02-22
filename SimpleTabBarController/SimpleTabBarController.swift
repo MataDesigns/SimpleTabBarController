@@ -107,7 +107,7 @@ open class SimpleTabBarController: UITabBarController {
                             container.removeFromSuperview()
                             container.frame.origin.y = tabBar.frame.origin.y + insets.top
                             self.view.addSubview(container)
-                            self.view.bringSubview(toFront: container)
+                            self.view.bringSubviewToFront(container)
                         }
                         let rect = container.bounds
                         contentView.frame = CGRect(x: 0, y: 0, width: rect.width, height: rect.height)
@@ -182,7 +182,7 @@ extension SimpleTabBarController /* Containers */ {
         self.view.setNeedsLayout()
     }
     
-    internal func highlightAction(_ sender: AnyObject?) {
+    @objc internal func highlightAction(_ sender: AnyObject?) {
         guard let items = tabBar.items else {
             reportEmptyItems()
             return
@@ -238,7 +238,7 @@ extension SimpleTabBarController /* Containers */ {
         }
     }
     
-    internal func dehighlightAction(_ sender: AnyObject?) {
+    @objc internal func dehighlightAction(_ sender: AnyObject?) {
         guard let items = tabBar.items else {
             reportEmptyItems()
             return
@@ -294,7 +294,7 @@ extension SimpleTabBarController /* Containers */ {
         }
     }
     
-    internal func selectAction(_ sender: AnyObject?) {
+    @objc internal func selectAction(_ sender: AnyObject?) {
         guard let items = tabBar.items else {
             reportEmptyItems()
             return

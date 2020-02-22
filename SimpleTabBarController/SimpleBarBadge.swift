@@ -85,7 +85,7 @@ open class SimpleTabBarBadge: UIView {
         guard let badgeValue = badgeValue else {
             return s
         }
-        if badgeValue.characters.count > 0 {
+        if badgeValue.count > 0 {
             s = badgeLabel.sizeThatFits(CGSize.init(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude))
             s.width = ceil(min(maximumSize.width, max(maximumSize.height, s.width + 6.0)))
             s.height = ceil(maximumSize.height)
